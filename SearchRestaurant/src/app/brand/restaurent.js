@@ -2,16 +2,18 @@ const restaurant = require("../model/restaurant");
 function restaurentBrand(req, res) {
   restaurant.create(
     {
-      location: {
-        latitude: 40.742051,
-        longitude: -74.004821
-      },
-      distance: "5",
-       rating: "5",
+      // location: {
+      //   latitude: 40.742051,
+      //   longitude: -74.004821
+      // },
+      distance: "2",
+       rating: "1",
+       city: "Bangalore",
       restaurentName: "serwerw",
       cuisien_name: "Iwerere",
       budget: 150000,
-      menu: "Panneerfry"
+      menu: "Panneerfry",
+      
     //   menu: ["Panneerfry" , "Pepperfry"]
     },
     (error, postValue) => {

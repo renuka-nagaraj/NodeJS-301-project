@@ -7,8 +7,9 @@ const restaurentModel = require('../model/restaurant');
 const validation = require('../validation/restaurent');
 const router = express.Router();
 
-router.post('/restaurent' , validate(validation),restaurent);
-router.get("/", getAllRestaturent);
+// router.post('/restaurent' , validate(validation),restaurent);
+router.post('/api/restaurent' , restaurent);
+router.get("/api/v1", getAllRestaturent);
 
 // router.get("/",);
 

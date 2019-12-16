@@ -24,7 +24,13 @@ async function allRestaurents(req, res) {
   if(searchValue.restaurentName) {
     filter.restaurentName = searchValue.restaurentName
   }
-  console.log(searchValue);
+  if(searchValue.date) {
+    filter.date = new Date(searchValue.date)
+  }
+  if(searchValue.city) {
+    filter.city = searchValue.city
+  }
+  console.log(searchValue , filter);
   const search = await getAllRestaturent.find(
     filter,
     (error, particularValue) => {
